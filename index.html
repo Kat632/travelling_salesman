@@ -12,7 +12,7 @@
         content="">
     <meta name="keywords"
         content="">
-    <meta name="author" content="">
+    <meta name="author" content="Andy MacKellar, Katherine Biggs">
     <meta name="page-topic" content="">
     <meta name="page-type" content="">
     <meta name="robots" content="index, follow">
@@ -42,16 +42,34 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-    <title>The Travelling Salesman</title>
+    <title>Travelling Salesman</title>
 </head>
 
 		
-<body>		
-		
-<div class="container">
+<body>
 
-	<h2>Travelling Salesman Demonstration - fully responsive &amp; mobile friendly</h2>
-	<h4>(Postcodes mandatory - Name &amp; Address optional)</h4>
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center headings">
+        <h1 class="ts-heading">Travelling Salesman Demonstration - fully responsive &amp; mobile friendly</h1>
+        <h2 class="ts-subheading">(Postcodes mandatory - Name &amp; Address optional)</h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-light">Page Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
+      blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
+      reprehenderit expedita.</p>
+  </div>
+</section>
+<div class="container">
 			
 	<div class="row"> 	
   		<div class="col-md-6 col-sm-12"> 
@@ -506,9 +524,6 @@ function initMap() {
 	</script>
     
     <!-- Might need &libraries=geometry on end of src below -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=xxxx&callback=initMap">
-   
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWjH8xYvNRuc83_9NHiTLLAZDExS_O7yY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
     
         
