@@ -2,528 +2,538 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!-- Meta tags for improved SEO using search keywords and descriptions -->
-    <meta name="description"
-        content="">
-    <meta name="keywords"
-        content="">
-    <meta name="author" content="Andy MacKellar, Katherine Biggs">
-    <meta name="page-topic" content="">
-    <meta name="page-type" content="">
-    <meta name="robots" content="index, follow">
+  <!-- Meta tags for improved SEO using search keywords and descriptions -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Andy MacKellar, Katherine Biggs">
+  <meta name="page-topic" content="">
+  <meta name="page-type" content="">
+  <meta name="robots" content="index, follow">
 
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 
-    <title>Travelling Salesman</title>
+  <title>Travelling Salesman</title>
 </head>
 
-		
+
 <body>
 
-<!-- Full Page Image Header with Vertically Centered Content -->
-<header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center headings">
-        <h1 class="ts-heading">Travelling Salesman Demonstration - fully responsive &amp; mobile friendly</h1>
-        <h2 class="ts-subheading">(Postcodes mandatory - Name &amp; Address optional)</h2>
+  <!-- Full Page Image Header with Vertically Centered Content -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center headings">
+          <h1 class="ts-heading">Travelling Salesman Demonstration - fully responsive &amp; mobile friendly</h1>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Page Content -->
-<section class="py-5">
+  <!-- Page Content -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-light ts-subheading">(Postcodes mandatory - Name &amp; Address optional)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
+        blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
+        reprehenderit expedita.</p>
+    </div>
+  </section>
   <div class="container">
-    <h2 class="fw-light">Page Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
-      blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
-      reprehenderit expedita.</p>
-  </div>
-</section>
-<div class="container">
-			
-	<div class="row"> 	
-  		<div class="col-md-6 col-sm-12"> 
-  			<div class="row" style="margin-top:10px; margin-bottom:20px; border:solid 2px; border-color:#C6C6C6;"> 			 
 
-				<label style="margin-left:5px; margin-bottom:0px;">Start</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="nameStart" name="name1" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="addressStart" name="address1" placeholder="Address" value="SSL">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcodeStart" name="postcode1" placeholder="Postcode" value="GL2 2AQ">
-		        		</div>
-		  			</div>		
-				</div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <label style="margin-left:5px; margin-bottom:0px;">Start</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="nameStart" name="name1" placeholder="Name">
+                </div>
+              </div>
 
-				<label style="margin-left:5px; margin-bottom:0px;">End</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="nameEnd" name="name1" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="addressEnd" name="address1" placeholder="Address" value="SSL">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcodeEnd" name="postcode1" placeholder="Postcode" value="GL2 2AQ">
-		        		</div>
-		  			</div>		
-				</div>
-				
-				<br>
-				<label style="margin-left:5px; margin-bottom:0px;">Visits</label>
-				<br>
-				
-				<label style="margin-left:5px; margin-bottom:0px;">1</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="name1" name="name1" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="address1" name="address1" placeholder="Address" value="Temple Meads">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcode1" name="postcode1" placeholder="Postcode" value="BS1 6QF">
-		        		</div>
-		  			</div>		
-				</div>
-				
-				<label style="margin-left:5px; margin-bottom:0px;">2</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="name2" name="name2" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="address2" name="address2" placeholder="Address" value="Bristol Parkway">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcode2" name="postcode2" placeholder="Postcode" value="BS34 8RG">
-		        		</div>
-		  			</div>		
-				</div>
-		
-		
-				<label style="margin-left:5px; margin-bottom:0px;">3</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="name3" name="name3" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="address3" name="address3" placeholder="Address" value="Weighbridge">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcode3" name="postcode3" placeholder="Postcode" value="GL6 9AL">
-		        		</div>
-		  			</div>		
-				</div>
-				
-				<label style="margin-left:5px; margin-bottom:0px;">4</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="name4" name="name4" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="address4" name="address4" placeholder="Address" value="Castle Coombe">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcode4" name="postcode4" placeholder="Postcode" value="SN14 7EY">
-		        		</div>
-		  			</div>		
-				</div>
-				
-				<label style="margin-left:5px; margin-bottom:0px;">5</label>
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
-		  			<div class="col-md-4">
-		  				<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="name5" name="name5" placeholder="Name">
-		        		</div>
-		  			</div>
-		  		
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="address5" name="address5" placeholder="Address" value="Bath Spa">
-		        		</div>
-		  			</div>
-		  			
-		  			<div class="col-md-4">	
-		        		<div class="form-group" style="display:inline-block; width:100%;">
-		        			<input type="text" class="form-control" id="postcode5" name="postcode5" placeholder="Postcode" value="BA1 1SU">
-		        		</div>
-		  			</div>
-		  		</div>		
-			
-				<div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
-				
-					<div class="col-md-6" style="padding-top:10px; border:solid 0px;">
-						<input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route" onclick= " return CalculateRoute(false);">
-						<br>
-						<br>
-						<label>Distance:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="distance" name="distance" readonly>
-						<br>
-						<br>
-						<label >Time:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="time" name="time" readonly>
-						<br>
-						<br>
-						<label >Visit Order:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="visitOrder" name="visitOrder" readonly>
-						
-						<div id="directions-panel" style="margin-top:20px;"></div>
-					</div>
-						
-					<div class="col-md-6" style="padding-top:10px; border:solid 0px;">
-						<input style="margin-bottom:10px;"type="button" value="Calculate Optimised Route" onclick= " return CalculateRoute(true);">
-						<br>
-						<br>
-						<label>Distance:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="optimisedDistance" name="optimisedDistance" readonly>
-						<br>
-						<br>
-						<label>Time:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="optimisedTime" name="optimisedTime" readonly>
-						<br>
-						<br>
-						<label >Visit Order:</label>
-						<input style="position:absolute; left:100px; border:none;" type="text" id="optimisedVisitOrder" name="optimisedVisitOrder" readonly>
-						
-						<div id="optimised-directions-panel" style="margin-top:20px;"></div>							
-					</div>	
-				</div>
-			</div>
-		</div>
-	
-		<div class="col-md-6">
-			<!-- Map code here -->
-			<div id="map" style="height:980px; width:100%; margin-top:10px; margin-bottom:20px;"></div>
-		</div>
-		
-	</div>
-	
-</div><!-- container -->  
-<div id="directions-panel" style="margin-top:0px; visibility:hidden; background-color:#FFEE77; padding:10px;"></div>  	    
-			    
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="addressStart" name="address1" placeholder="Address"
+                    value="SSL">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcodeStart" name="postcode1" placeholder="Postcode"
+                    value="GL2 2AQ">
+                </div>
+              </div>
+            </div>
+
+            <label style="margin-left:5px; margin-bottom:0px;">End</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="nameEnd" name="name1" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="addressEnd" name="address1" placeholder="Address"
+                    value="SSL">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcodeEnd" name="postcode1" placeholder="Postcode"
+                    value="GL2 2AQ">
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <label style="margin-left:5px; margin-bottom:0px;">Visits</label>
+            <br>
+
+            <label style="margin-left:5px; margin-bottom:0px;">1</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="name1" name="name1" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="address1" name="address1" placeholder="Address"
+                    value="Temple Meads">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcode1" name="postcode1" placeholder="Postcode"
+                    value="BS1 6QF">
+                </div>
+              </div>
+            </div>
+
+            <label style="margin-left:5px; margin-bottom:0px;">2</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="name2" name="name2" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="address2" name="address2" placeholder="Address"
+                    value="Bristol Parkway">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcode2" name="postcode2" placeholder="Postcode"
+                    value="BS34 8RG">
+                </div>
+              </div>
+            </div>
+
+
+            <label style="margin-left:5px; margin-bottom:0px;">3</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="name3" name="name3" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="address3" name="address3" placeholder="Address"
+                    value="Weighbridge">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcode3" name="postcode3" placeholder="Postcode"
+                    value="GL6 9AL">
+                </div>
+              </div>
+            </div>
+
+            <label style="margin-left:5px; margin-bottom:0px;">4</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="name4" name="name4" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="address4" name="address4" placeholder="Address"
+                    value="Castle Coombe">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcode4" name="postcode4" placeholder="Postcode"
+                    value="SN14 7EY">
+                </div>
+              </div>
+            </div>
+
+            <label style="margin-left:5px; margin-bottom:0px;">5</label>
+            <div class="row"
+              style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="name5" name="name5" placeholder="Name">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="address5" name="address5" placeholder="Address"
+                    value="Bath Spa">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group" style="display:inline-block; width:100%;">
+                  <input type="text" class="form-control" id="postcode5" name="postcode5" placeholder="Postcode"
+                    value="BA1 1SU">
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
+
+              <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
+                <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
+                  onclick=" return CalculateRoute(false);">
+                <br>
+                <br>
+                <label>Distance:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="distance" name="distance"
+                  readonly>
+                <br>
+                <br>
+                <label>Time:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="time" name="time" readonly>
+                <br>
+                <br>
+                <label>Visit Order:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="visitOrder" name="visitOrder"
+                  readonly>
+
+                <div id="directions-panel" style="margin-top:20px;"></div>
+              </div>
+
+              <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
+                <input id="optimisedRoute" style="margin-bottom:10px;" type="button" value="Calculate Optimised Route"
+                  onclick=" return CalculateRoute(true);">
+                <br>
+                <br>
+                <label>Distance:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedDistance"
+                  name="optimisedDistance" readonly>
+                <br>
+                <br>
+                <label>Time:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedTime"
+                  name="optimisedTime" readonly>
+                <br>
+                <br>
+                <label>Visit Order:</label>
+                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedVisitOrder"
+                  name="optimisedVisitOrder" readonly>
+
+                <div id="optimised-directions-panel" style="margin-top:20px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Map code here -->
+        <div id="map" style="height:980px; width:100%; margin-top:10px; margin-bottom:20px;"></div>
+      </div>
+
+    </div>
+
+  </div><!-- container -->
+  <div id="directions-panel" style="margin-top:0px; visibility:hidden; background-color:#FFEE77; padding:10px;"></div>
+
 </body>
-	          
-	    
-	    		
+
+
+
 <script>
+  var routeMarkers = [];
+  var starredMarkers = [];
 
-var routeMarkers = []; 
-var starredMarkers = [];
+  function initMap() {
+    directionsService = new google.maps.DirectionsService;
 
-function initMap() {
-	 directionsService = new google.maps.DirectionsService;
-
- 	// Suppress markers so custom markers can be added
-     directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+    // Suppress markers so custom markers can be added
+    directionsDisplay = new google.maps.DirectionsRenderer({
+      suppressMarkers: true
+    });
     /*var*/
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 6,
-      center: {lat: 54.0, lng: -2.0}
+      center: {
+        lat: 54.0,
+        lng: -2.0
+      }
     });
     directionsDisplay.setMap(map);
-}	
+  }
 
-    function CalculateRoute(optimiseRoute)
-    {
-        //alert('Calculate Route');
-        
-        while (routeMarkers.length)
-		{
-			routeMarkers.pop().setMap(null);
-		}
+  function CalculateRoute(optimiseRoute) {
+    //alert('Calculate Route');
 
-		var totalDistance = 0;
-		var totalTime = 0;
-        var waypts = [];
-    	var markerColours = [];
-
-        var origin = document.getElementById('postcodeStart').value;
-        var destination = document.getElementById('postcodeEnd').value;
-        geocoder = new google.maps.Geocoder();
-
-        for (i=1; i<6; i++)
-        { 
-        	if (document.getElementById('postcode'+i).value.length > 0)
-        	{     
-		        waypts.push({
-			        location: document.getElementById('postcode'+i).value,
-			        stopover: true
-		        });
-        	}
-        }
-        
-        
-        var startLat;
-        var startLng;
-
-        directionsService.route({
-	          region: 'uk',
-	          origin: origin,
-	          destination: destination,
-	          waypoints: waypts,
-	          optimizeWaypoints: optimiseRoute,
-	          unitSystem: google.maps.UnitSystem.IMPERIAL,
-	          travelMode: google.maps.TravelMode.DRIVING
-	        }, function(response, status) {
-	          if (status === google.maps.DirectionsStatus.OK) {
-	            directionsDisplay.setDirections(response);
-	            /*var*/ route = response.routes[0];
-	            
-	            var summaryPanel;
-
-	            if (optimiseRoute)
-	            {
-		            summaryPanel = document.getElementById('optimised-directions-panel');
-	            }
-	            else
-	            {
-	            	summaryPanel = document.getElementById('directions-panel');
-	            }
-
-	            summaryPanel.innerHTML = '';
-
-
-	            // For each route, display summary information.
-	            for (var i = 0; i < route.legs.length; i++) {
-	              var routeSegment = i + 1;
-
-	              //Don't need to display this
-	              
-	              summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-	                  '</b><br>';
-	              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-	              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-	              summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
-	              summaryPanel.innerHTML += route.legs[i].duration.text + '<br><br>';
-				  
-
-				  
-	              if (i < route.legs.length - 1)
-	              {
-		          	addCustomMarker(route.legs[i].end_location, routeSegment, 'ccff99', route.legs[i].end_address);
-	              }
-	              
-
-	              totalDistance += route.legs[i].distance.value;
-	              totalTime += route.legs[i].duration.value / 60;
-
-	            }
-
-	            /* Mileage is in metres, so convert to miles. */
-	            if (optimiseRoute)
-	            {
-	            	document.getElementById('optimisedDistance').value = Math.round((totalDistance * 5 / 8000), 10) + ' miles';
-	            	//document.getElementById('optimisedTime').value = pad(parseInt(totalTime / 60, 10)) + ':' + pad(parseInt(totalTime % 60, 10));
-	            	document.getElementById('optimisedTime').value = parseInt(totalTime / 60, 10) + ' hours ' + parseInt(totalTime % 60, 10) + ' mins';
-
-		            document.getElementById('optimisedVisitOrder').value="";
-		            for (i = 0; i < route.waypoint_order.length; i++)
-		            {
-		            	document.getElementById('optimisedVisitOrder').value += (route.waypoint_order[i] + 1) + " ";
-		            }
-	            }
-	            else
-	            {
-	            	document.getElementById('distance').value = Math.round((totalDistance * 5 / 8000), 10) + ' miles';
-	            	//document.getElementById('time').value = pad(parseInt(totalTime / 60, 10)) + ':' + pad(parseInt(totalTime % 60, 10));
-	            	document.getElementById('time').value = parseInt(totalTime / 60, 10) + ' hours ' + parseInt(totalTime % 60, 10) + ' mins';
-
-		            document.getElementById('visitOrder').value="";
-		            for (i = 0; i < route.waypoint_order.length; i++)
-		            {
-		            	document.getElementById('visitOrder').value += (route.waypoint_order[i] + 1) + " ";
-		            }
-	            	
-	            }
-
-			    // Add custom markers for origin & destination
-	  		 	// Check if start & end are the same and add offset if necessary
-		 		geocoder.geocode({'address':document.getElementById('postcodeStart').value.trim()}, function(results,status)
-
-      	  		{
-      	  		if (status === google.maps.GeocoderStatus.OK)
-      	  		{
-		        		//alert(results[0].geometry.location);
-		        		startLat = results[0].geometry.location.lat();
-		        		startLng = results[0].geometry.location.lng();
-
-		 		 		geocoder.geocode({'address':document.getElementById('postcodeEnd').value.trim()}, function(results,status)
-		 		        {
-		 		       		if (status === google.maps.GeocoderStatus.OK)
-		 		        	{
-		 				    	//alert(results[0].geometry.location);
-		 				        endLat = results[0].geometry.location.lat();
-		 				        endLng = results[0].geometry.location.lng();
-
-		 			        	if (document.getElementById('postcodeStart').value.trim() == document.getElementById('postcodeEnd').value.trim())
-		 			        	{
-		 				        	origin = new google.maps.LatLng(startLat,startLng);
-		 				        	destination = new google.maps.LatLng(startLat-.01,startLng);
-		 			        	}
-		 			        	else
-		 			        	{
-		 				        	origin = new google.maps.LatLng(startLat,startLng);
-		 				        	destination = new google.maps.LatLng(endLat,endLng);
-
-		 			        	}
-
-		 				        addCustomMarker(origin, 0, 'ff0000', 'Start');
-		 				        addCustomMarker(destination, route.legs.length, 'ff0000', 'End');
-		 					}
-		 					else
-		 					{
-		 		        		//alert('Geocode was not successful for the following reason: ' + status);
-		 			        	alert('End postcode / address not recognised');
-		 					}
-		 		   		});
-
-					}
-					else
-					{
-             			//alert('Geocode was not successful for the following reason: ' + status);
-	           			alert('Start postcode / address not recognised');
-					}
-      				});
-
-	          } else {
-	            window.alert('Directions request failed due to ' + status);
-	          }
-	        });  
- 
+    while (routeMarkers.length) {
+      routeMarkers.pop().setMap(null);
     }
 
-	function pad(n)
-    {
-		// Add leading zero if necessary.
-	    return (n < 10) ? ("0" + n) : n;
- 	}
-	
-	function addCustomMarker(position, text, colour, title, id, url = null, star = false) {
-	        //return new google.maps.Marker({
-	        if (star)
-		        icon = 'http://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=pin_star|' + text + '|' + colour + '|000000|0000ff';
-	        else
-		        icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + text + '|' + colour +'|000000';
-	        marker =  new google.maps.Marker({
-	          // @see http://stackoverflow.com/questions/2436484/how-can-i-create-numbered-map-markers-in-google-maps-v3 for numbered icons
-	          icon: icon,
-	          position: position,
-	          title: title,
-	          url: url,
-	          map: map
-	        });	
+    var totalDistance = 0;
+    var totalTime = 0;
+    var waypts = [];
+    var markerColours = [];
 
-	        google.maps.event.addListener(marker, 'click', function() {
-	        	document.getElementById('garage1').style.background = '#ffffff';
-	        	document.getElementById('garage2').style.background = '#ffffff';
-	        	document.getElementById('garage3').style.background = '#ffffff';
-	        	
-	        	document.getElementById(id).style.background = '#ffff99';
-	        });
+    var origin = document.getElementById('postcodeStart').value;
+    var destination = document.getElementById('postcodeEnd').value;
+    geocoder = new google.maps.Geocoder();
 
-	        
+    for (i = 1; i < 6; i++) {
+      if (document.getElementById('postcode' + i).value.length > 0) {
+        waypts.push({
+          location: document.getElementById('postcode' + i).value,
+          stopover: true
+        });
+      }
+    }
 
-	        if (url)
-	        {
-        		google.maps.event.addListener(marker, 'click', function() {
-        		window.open(this.url, 'title', 'width=840, height = 960, left = 400');
-        		});
-	        }
 
-	        if (star)
-	        {
-		        starredMarkers.push(marker);
-	        }
-	        else
-	        {
-		        routeMarkers.push(marker);  // 24/10/2016 AHM T20160825.0017  Added.
-	        }     
+    var startLat;
+    var startLng;
 
-	          //icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + text + '|' + colour +'|000000',
-	          //icon: 'http://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=' + 'pin_star' + '|' + text + '|ff0000|000000',
-	      
-	      }	     
-      
-	</script>
-    
-    <!-- Might need &libraries=geometry on end of src below -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWjH8xYvNRuc83_9NHiTLLAZDExS_O7yY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
-    
-        
+    directionsService.route({
+      region: 'uk',
+      origin: origin,
+      destination: destination,
+      waypoints: waypts,
+      optimizeWaypoints: optimiseRoute,
+      unitSystem: google.maps.UnitSystem.IMPERIAL,
+      travelMode: google.maps.TravelMode.DRIVING
+    }, function (response, status) {
+      if (status === google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+        /*var*/
+        route = response.routes[0];
+
+        var summaryPanel;
+
+        if (optimiseRoute) {
+          summaryPanel = document.getElementById('optimised-directions-panel');
+        } else {
+          summaryPanel = document.getElementById('directions-panel');
+        }
+
+        summaryPanel.innerHTML = '';
+
+
+        // For each route, display summary information.
+        for (var i = 0; i < route.legs.length; i++) {
+          var routeSegment = i + 1;
+
+          //Don't need to display this
+
+          summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+            '</b><br>';
+          summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+          summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+          summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
+          summaryPanel.innerHTML += route.legs[i].duration.text + '<br><br>';
+
+
+
+          if (i < route.legs.length - 1) {
+            addCustomMarker(route.legs[i].end_location, routeSegment, 'ccff99', route.legs[i].end_address);
+          }
+
+
+          totalDistance += route.legs[i].distance.value;
+          totalTime += route.legs[i].duration.value / 60;
+
+        }
+
+        /* Mileage is in metres, so convert to miles. */
+        if (optimiseRoute) {
+          document.getElementById('optimisedDistance').value = Math.round((totalDistance * 5 / 8000), 10) +
+          ' miles';
+          //document.getElementById('optimisedTime').value = pad(parseInt(totalTime / 60, 10)) + ':' + pad(parseInt(totalTime % 60, 10));
+          document.getElementById('optimisedTime').value = parseInt(totalTime / 60, 10) + ' hours ' + parseInt(
+            totalTime % 60, 10) + ' mins';
+
+          document.getElementById('optimisedVisitOrder').value = "";
+          for (i = 0; i < route.waypoint_order.length; i++) {
+            document.getElementById('optimisedVisitOrder').value += (route.waypoint_order[i] + 1) + " ";
+          }
+        } else {
+          document.getElementById('distance').value = Math.round((totalDistance * 5 / 8000), 10) + ' miles';
+          //document.getElementById('time').value = pad(parseInt(totalTime / 60, 10)) + ':' + pad(parseInt(totalTime % 60, 10));
+          document.getElementById('time').value = parseInt(totalTime / 60, 10) + ' hours ' + parseInt(totalTime %
+            60, 10) + ' mins';
+
+          document.getElementById('visitOrder').value = "";
+          for (i = 0; i < route.waypoint_order.length; i++) {
+            document.getElementById('visitOrder').value += (route.waypoint_order[i] + 1) + " ";
+          }
+
+        }
+
+        // Add custom markers for origin & destination
+        // Check if start & end are the same and add offset if necessary
+        geocoder.geocode({
+            'address': document.getElementById('postcodeStart').value.trim()
+          }, function (results, status)
+
+          {
+            if (status === google.maps.GeocoderStatus.OK) {
+              //alert(results[0].geometry.location);
+              startLat = results[0].geometry.location.lat();
+              startLng = results[0].geometry.location.lng();
+
+              geocoder.geocode({
+                'address': document.getElementById('postcodeEnd').value.trim()
+              }, function (results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                  //alert(results[0].geometry.location);
+                  endLat = results[0].geometry.location.lat();
+                  endLng = results[0].geometry.location.lng();
+
+                  if (document.getElementById('postcodeStart').value.trim() == document.getElementById(
+                      'postcodeEnd').value.trim()) {
+                    origin = new google.maps.LatLng(startLat, startLng);
+                    destination = new google.maps.LatLng(startLat - .01, startLng);
+                  } else {
+                    origin = new google.maps.LatLng(startLat, startLng);
+                    destination = new google.maps.LatLng(endLat, endLng);
+
+                  }
+
+                  addCustomMarker(origin, 0, 'ff0000', 'Start');
+                  addCustomMarker(destination, route.legs.length, 'ff0000', 'End');
+                } else {
+                  //alert('Geocode was not successful for the following reason: ' + status);
+                  alert('End postcode / address not recognised');
+                }
+              });
+
+            } else {
+              //alert('Geocode was not successful for the following reason: ' + status);
+              alert('Start postcode / address not recognised');
+            }
+          });
+
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+
+  }
+
+  function pad(n) {
+    // Add leading zero if necessary.
+    return (n < 10) ? ("0" + n) : n;
+  }
+
+  function addCustomMarker(position, text, colour, title, id, url = null, star = false) {
+    //return new google.maps.Marker({
+    if (star)
+      icon = 'http://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=pin_star|' + text + '|' + colour +
+      '|000000|0000ff';
+    else
+      icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + text + '|' + colour + '|000000';
+    marker = new google.maps.Marker({
+      // @see http://stackoverflow.com/questions/2436484/how-can-i-create-numbered-map-markers-in-google-maps-v3 for numbered icons
+      icon: icon,
+      position: position,
+      title: title,
+      url: url,
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+      document.getElementById('garage1').style.background = '#ffffff';
+      document.getElementById('garage2').style.background = '#ffffff';
+      document.getElementById('garage3').style.background = '#ffffff';
+
+      document.getElementById(id).style.background = '#ffff99';
+    });
+
+
+
+    if (url) {
+      google.maps.event.addListener(marker, 'click', function () {
+        window.open(this.url, 'title', 'width=840, height = 960, left = 400');
+      });
+    }
+
+    if (star) {
+      starredMarkers.push(marker);
+    } else {
+      routeMarkers.push(marker); // 24/10/2016 AHM T20160825.0017  Added.
+    }
+
+    //icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + text + '|' + colour +'|000000',
+    //icon: 'http://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=' + 'pin_star' + '|' + text + '|ff0000|000000',
+
+  }
+</script>
+
+<!-- Might need &libraries=geometry on end of src below -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWjH8xYvNRuc83_9NHiTLLAZDExS_O7yY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE"
+  async defer></script>
