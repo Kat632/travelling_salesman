@@ -90,17 +90,34 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/*
 .route-label {
-
+    margin-right: 5px;
 }
-*/
 
 #section2 > input {
     /*position:absolute;*/ 
     left:100px; 
     border:none;
 }
+
+button > i {
+    margin-right: 5px;
+}
+
+.btn {
+    border: #bc6c25;
+    border-radius:2em;
+    background-color: #bc6c25;
+    color: #fefae0;
+    padding: .5em 1.5em;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: #dda15e;
+    color: #fefae0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 
 #map {
     height:980px; 

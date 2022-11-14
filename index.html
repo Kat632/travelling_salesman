@@ -256,27 +256,30 @@
     </div>
     <div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
 
-      <div id="section-to-print-1" class="col-md-6" style="padding-top:10px; border:solid 0px;">
+      <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
         <div class="card">
           <div class="card-body">
             <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
               onclick=" return CalculateRoute(false);">
+            <button class="btn float-right" onclick="PrintDiv1('section1')"><i class="fa-solid fa-print"></i>Print</button>
             <br>
             <br>
-            <label>Distance:</label>
+            <div id="section1">
+            <label class="route-label">Distance:</label>
             <input style="position:absolute; left:100px; border:none;" type="text" id="distance" name="distance"
               readonly>
             <br>
             <br>
-            <label>Time:</label>
+            <label class="route-label">Time:</label>
             <input style="position:absolute; left:100px; border:none;" type="text" id="time" name="time" readonly>
             <br>
             <br>
-            <label>Visit Order:</label>
+            <label class="route-label">Visit Order:</label>
             <input style="position:absolute; left:100px; border:none;" type="text" id="visitOrder" name="visitOrder"
               readonly>
 
             <div id="directions-panel" style="margin-top:20px;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -286,7 +289,7 @@
           <div class="card-body">
             <input id="optimisedRoute" style="margin-bottom:10px;" type="button" value="Calculate Optimised Route"
               onclick=" return CalculateRoute(true);">
-            <input type="button" onclick="PrintDiv('section2')" value="print a div!" />
+            <button class="btn float-right" onclick="PrintDiv('section2')"><i class="fa-solid fa-print"></i>Print</button>
             <br>
             <br>
             <div id="section2">
@@ -582,7 +585,21 @@
      
      setTimeout(function() {
       window.print();
-     }, 1500);
+     }, 1000);
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+<script>
+    function PrintDiv1(section1) {
+     var printContents = document.getElementById(section1).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+     
+     setTimeout(function() {
+      window.print();
+     }, 1000);
 
      document.body.innerHTML = originalContents;
 }
