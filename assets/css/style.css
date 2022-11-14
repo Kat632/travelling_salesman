@@ -90,6 +90,18 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/*
+.route-label {
+
+}
+*/
+
+#section2 > input {
+    /*position:absolute;*/ 
+    left:100px; 
+    border:none;
+}
+
 #map {
     height:980px; 
     width:100%; 

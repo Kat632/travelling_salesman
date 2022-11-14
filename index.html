@@ -20,6 +20,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" media="print" href="assets/css/print.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,7 +123,7 @@
             </div>
 
             <br>
-            <span><label class="label">Visits</label><i class="fa-solid fa-building"></i></span>
+            <span><label class="label">Visits</label><i class="fa-solid fa-flag"></i></span>
             <br>
 
             <label class="visit-label">1</label>
@@ -255,7 +256,7 @@
     </div>
     <div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
 
-      <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
+      <div id="section-to-print-1" class="col-md-6" style="padding-top:10px; border:solid 0px;">
         <div class="card">
           <div class="card-body">
             <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
@@ -285,23 +286,26 @@
           <div class="card-body">
             <input id="optimisedRoute" style="margin-bottom:10px;" type="button" value="Calculate Optimised Route"
               onclick=" return CalculateRoute(true);">
+            <input type="button" onclick="PrintDiv('section2')" value="print a div!" />
             <br>
             <br>
-            <label>Distance:</label>
-            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedDistance"
-              name="optimisedDistance" readonly>
-            <br>
-            <br>
-            <label>Time:</label>
-            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedTime"
-              name="optimisedTime" readonly>
-            <br>
-            <br>
-            <label>Visit Order:</label>
-            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedVisitOrder"
-              name="optimisedVisitOrder" readonly>
+            <div id="section2">
+              <label class="route-label">Distance:</label>
+              <input type="text" id="optimisedDistance"
+                name="optimisedDistance" readonly>
+              <br>
+              <br>
+              <label class="route-label">Time:</label>
+              <input type="text" id="optimisedTime"
+                name="optimisedTime" readonly>
+              <br>
+              <br>
+              <label class="route-label">Visit Order:</label>
+              <input type="text" id="optimisedVisitOrder"
+                name="optimisedVisitOrder" readonly>
 
-            <div id="optimised-directions-panel" style="margin-top:20px;"></div>
+              <div id="optimised-directions-panel" style="margin-top:20px;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -549,3 +553,37 @@
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWjH8xYvNRuc83_9NHiTLLAZDExS_O7yY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE"
   async defer></script>
+
+<!-- Print calculated routes -->
+<script>
+  //function PrintDiv(id) {
+    //var data = document.getElementById(id).innerHTML;
+   // var myWindow = window.open('', 'my div', 'height=400,width=600');
+    //myWindow.document.write('<html><head><title>my div</title>');
+    /*optional stylesheet*/ //myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+    //myWindow.document.write('</head><body >');
+    //myWindow.document.write(data);
+    //myWindow.document.write('</body></html>');
+    //myWindow.document.close(); // necessary for IE >= 10
+
+    //myWindow.onload = function () { // necessary if the div contain images
+
+      //myWindow.focus(); // necessary for IE >= 10
+      //myWindow.print();
+      //myWindow.close();
+    //};
+  //}
+
+  function PrintDiv(section2) {
+     var printContents = document.getElementById(section2).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+     
+     setTimeout(function() {
+      window.print();
+     }, 1500);
+
+     document.body.innerHTML = originalContents;
+}
+</script>
