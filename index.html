@@ -23,7 +23,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -72,7 +73,7 @@
       <div class="col-md-6 col-sm-12">
         <div class="card">
           <div class="card-body">
-            <label style="margin-left:5px; margin-bottom:0px;">Start</label>
+            <span><label class="label">Start</label><i class="fa-solid fa-car-side icon"></i></span>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -96,7 +97,7 @@
               </div>
             </div>
 
-            <label style="margin-left:5px; margin-bottom:0px;">End</label>
+            <span><label class="label">End</label><i class="fa-solid fa-car-side icon"></i></span>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -121,10 +122,10 @@
             </div>
 
             <br>
-            <label style="margin-left:5px; margin-bottom:0px;">Visits</label>
+            <span><label class="label">Visits</label><i class="fa-solid fa-building"></i></span>
             <br>
 
-            <label style="margin-left:5px; margin-bottom:0px;">1</label>
+            <label class="visit-label">1</label>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -148,7 +149,7 @@
               </div>
             </div>
 
-            <label style="margin-left:5px; margin-bottom:0px;">2</label>
+            <label class="visit-label">2</label>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -173,7 +174,7 @@
             </div>
 
 
-            <label style="margin-left:5px; margin-bottom:0px;">3</label>
+            <label class="visit-label">3</label>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -197,7 +198,7 @@
               </div>
             </div>
 
-            <label style="margin-left:5px; margin-bottom:0px;">4</label>
+            <label class="visit-label">4</label>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -221,7 +222,7 @@
               </div>
             </div>
 
-            <label style="margin-left:5px; margin-bottom:0px;">5</label>
+            <label class="visit-label">5</label>
             <div class="row"
               style="margin-left:5px; margin-right:5px; margin-bottom:20px; border:solid 1px; padding-top:10px;">
               <div class="col-md-4">
@@ -244,52 +245,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
-
-              <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
-                <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
-                  onclick=" return CalculateRoute(false);">
-                <br>
-                <br>
-                <label>Distance:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="distance" name="distance"
-                  readonly>
-                <br>
-                <br>
-                <label>Time:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="time" name="time" readonly>
-                <br>
-                <br>
-                <label>Visit Order:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="visitOrder" name="visitOrder"
-                  readonly>
-
-                <div id="directions-panel" style="margin-top:20px;"></div>
-              </div>
-
-              <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
-                <input id="optimisedRoute" style="margin-bottom:10px;" type="button" value="Calculate Optimised Route"
-                  onclick=" return CalculateRoute(true);">
-                <br>
-                <br>
-                <label>Distance:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedDistance"
-                  name="optimisedDistance" readonly>
-                <br>
-                <br>
-                <label>Time:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedTime"
-                  name="optimisedTime" readonly>
-                <br>
-                <br>
-                <label>Visit Order:</label>
-                <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedVisitOrder"
-                  name="optimisedVisitOrder" readonly>
-
-                <div id="optimised-directions-panel" style="margin-top:20px;"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -297,8 +252,65 @@
         <!-- Map code here -->
         <div id="map" style="height:980px; width:100%; margin-top:10px; margin-bottom:20px;"></div>
       </div>
-
     </div>
+    <div class="row" style="margin-left:5px; margin-right:5px; margin-bottom:20px; padding-top:10px;">
+
+      <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
+        <div class="card">
+          <div class="card-body">
+            <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
+              onclick=" return CalculateRoute(false);">
+            <br>
+            <br>
+            <label>Distance:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="distance" name="distance"
+              readonly>
+            <br>
+            <br>
+            <label>Time:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="time" name="time" readonly>
+            <br>
+            <br>
+            <label>Visit Order:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="visitOrder" name="visitOrder"
+              readonly>
+
+            <div id="directions-panel" style="margin-top:20px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="padding-top:10px; border:solid 0px;">
+        <div class="card">
+          <div class="card-body">
+            <input id="optimisedRoute" style="margin-bottom:10px;" type="button" value="Calculate Optimised Route"
+              onclick=" return CalculateRoute(true);">
+            <br>
+            <br>
+            <label>Distance:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedDistance"
+              name="optimisedDistance" readonly>
+            <br>
+            <br>
+            <label>Time:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedTime"
+              name="optimisedTime" readonly>
+            <br>
+            <br>
+            <label>Visit Order:</label>
+            <input style="position:absolute; left:100px; border:none;" type="text" id="optimisedVisitOrder"
+              name="optimisedVisitOrder" readonly>
+
+            <div id="optimised-directions-panel" style="margin-top:20px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
 
   </div><!-- container -->
   <div id="directions-panel" style="margin-top:0px; visibility:hidden; background-color:#FFEE77; padding:10px;"></div>
@@ -411,7 +423,7 @@
         /* Mileage is in metres, so convert to miles. */
         if (optimiseRoute) {
           document.getElementById('optimisedDistance').value = Math.round((totalDistance * 5 / 8000), 10) +
-          ' miles';
+            ' miles';
           //document.getElementById('optimisedTime').value = pad(parseInt(totalTime / 60, 10)) + ':' + pad(parseInt(totalTime % 60, 10));
           document.getElementById('optimisedTime').value = parseInt(totalTime / 60, 10) + ' hours ' + parseInt(
             totalTime % 60, 10) + ' mins';
