@@ -62,10 +62,10 @@
   <!-- Page Content -->
   <section class="py-5">
     <div class="container">
-      <h2 class="fw-light ts-subheading">(Postcodes mandatory - Name &amp; Address optional)</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
-        blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
-        reprehenderit expedita.</p>
+      <h2 class="fw-light ts-subheading">How to use</h2>
+    </div>
+    <div class="container">
+      <p class="background-box">Postcodes are mandatory - Name &amp; Address are optional</p>
     </div>
   </section>
   <div class="container">
@@ -261,7 +261,7 @@
           <div class="card-body">
             <input id="calcRoute" style="margin-bottom:10px;" type="button" value="Calculate Route"
               onclick=" return CalculateRoute(false);">
-            <button id="SendToPhone" class="btn" style="margin-bottom:10px;" type="button" value="Send To Phone" onclick="location.href='https://www.google.com/maps/search/?api=1&parameters&query=Quedgeley,+Gloucester+GL2+2AQ';"><i class="fa-solid fa-phone"></i></button>
+            <button id="SendToGoogleMaps" class="btn" style="margin-bottom:10px;">Send to Google Maps</button>
             <button class="btn float-right" onclick="PrintDiv1('section1')"><i class="fa-solid fa-print"></i>Print</button>
             <br>
             <br>
@@ -315,7 +315,7 @@
       </div>
     </div>
   </div>
-  </div>
+  </div> 
 
 
   </div>
@@ -504,6 +504,15 @@
 
   }
 
+  function storePostcode(){
+    let inputOne = document.getElementById("postcodeStart").value;
+    let inputTwo = document.getElementById("userInput").value;
+    let inputThree = document.getElementById("userInput").value;
+    let inputFour = document.getElementById("userInput").value;
+    let inputFive = document.getElementById("postcodeEnd").value;
+    alert(input)
+}
+
   function pad(n) {
     // Add leading zero if necessary.
     return (n < 10) ? ("0" + n) : n;
@@ -560,24 +569,6 @@
 
 <!-- Print calculated routes -->
 <script>
-  //function PrintDiv(id) {
-    //var data = document.getElementById(id).innerHTML;
-   // var myWindow = window.open('', 'my div', 'height=400,width=600');
-    //myWindow.document.write('<html><head><title>my div</title>');
-    /*optional stylesheet*/ //myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
-    //myWindow.document.write('</head><body >');
-    //myWindow.document.write(data);
-    //myWindow.document.write('</body></html>');
-    //myWindow.document.close(); // necessary for IE >= 10
-
-    //myWindow.onload = function () { // necessary if the div contain images
-
-      //myWindow.focus(); // necessary for IE >= 10
-      //myWindow.print();
-      //myWindow.close();
-    //};
-  //}
-
   function PrintDiv(section2) {
      var printContents = document.getElementById(section2).innerHTML;
      var originalContents = document.body.innerHTML;
@@ -604,4 +595,49 @@
 
      document.body.innerHTML = originalContents;
 }
+</script>
+
+<script>
+  jQuery.getJSON(driverURL, function(dData){
+  var routeObject = {};
+  var lat = dData.Location.lat;
+  var lng = dData.Location.lng;
+  routeObject.origin = new google.maps.LatLng(lat, lng);
+  routeObject.destination = new google.maps.LatLng(endRoute.lat, endRoute.lng);
+  routeObject.waypoints = waypoints;
+  routeObject.travelMode = google.maps.TravelMode.DRIVING;
+  routeObject.optimizeWaypoints = true;
+  directionsService.route(routeObject, function(response, status) {
+       if (status === google.maps.DirectionsStatus.OK) {
+            var directionsDisplay = new google.maps.DirectionsRenderer({
+                  polylineOptions: {
+                       strokeColor: colors[driverLines.length]
+                  }
+            });
+            directionsDisplay.setMap(dMap);
+            directionsDisplay.setDirections(response);
+       } else {
+            window.alert('Directions request failed due to ' + status);
+       }
+  });
+});
+
+  var dirs = ''
+  for(var x = 0; x<Data.length;x++){
+    dirs += Data[x].Address + "," + Data[x].City + "," + Data[x].State + "," + Data[x].Zip + "/";
+}
+</script>
+
+    <!-- Send routes to Google Maps app/desktop -->
+<script>
+
+const button = document.querySelector('#sendToGoogleMaps')
+
+// add click event listener
+button.addEventListener('click', () => {
+  // open a new tab
+  const dirLink = window.open('http://maps.google.com/maps/dir/', '_blank');
+  dirLink += start.Address + "," + start.City + "," + start.State + "," + start.Zip + "/" + dirs + end.Address + "," + end.City + "," + end.State + "," + end.Zip;
+})
+
 </script>

@@ -37,6 +37,14 @@ body {
     text-align: center;
 }
 
+.background-box {
+    background: #FEFAE0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 1.5em 1.5em .5em;
+    border-radius: 2em;
+}
+
 .card {
     margin-top: 10px;
     margin-bottom: 20px;
